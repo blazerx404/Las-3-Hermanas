@@ -1,14 +1,262 @@
 <!DOCTYPE html>
+<html lang="es">
 
-<html>
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" href="styles/style.css"/>
-  <title>Hello, World!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las 3 Hermanas Catering</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h1>
-    Hello, World!
-  </h1>
+
+<header>
+
+    <div class="container nav">
+
+     <img src="logo.png" alt="Las 3 Hermanas Catering" class="logo">
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a href="https://api.whatsapp.com/send?phone=5491178234762&text=Hola,%20quisiera%20solicitar%20un%20presupuesto%20para%20un%20evento."
+   target="_blank"
+   class="btn-whatsapp">
+    WhatsApp
+</a>
+
+    </div>
+
+</header>
+
+<section id="inicio" class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-image">
+            <img src="picada.jpg" alt="Catering">
+        </div>
+
+        <div class="hero-text">
+
+            <h1>
+                Sabores que hacen de cada celebración un momento inolvidable.
+            </h1>
+
+            <p>
+                Soluciones gastronómicas para empresas, reuniones y eventos especiales.
+            </p>
+
+            <a href="#contacto" class="btn-principal">
+                Solicitar Presupuesto
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="destacados">
+
+    <div class="container destacados-grid">
+
+        <div class="card-check">
+            ✔ Presupuestos personalizados
+        </div>
+
+        <div class="card-check">
+            ✔ Menús adaptados a cada evento
+        </div>
+
+        <div class="card-check">
+            ✔ Atención para 20, 50, 100 o más invitados
+        </div>
+
+    </div>
+
+</section>
+
+<section id="servicios">
+
+    <div class="container">
+
+        <h2>Servicios</h2>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <img src="img/menu-ejecutivo.jpg" alt="">
+                <h3>Menú Ejecutivo</h3>
+            </div>
+
+            <div class="service-card">
+                <img src="img/catering.jpg" alt="">
+                <h3>Catering Eventos</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="menu">
+
+    <div class="container">
+
+        <h2>¿Qué ofrecemos?</h2>
+
+        <div class="menu-grid">
+
+            <div>🥐 Bandejas de desayuno</div>
+            <div>☕ Desayunos sorpresa</div>
+            <div>🧀 Bandejas de fiambres y quesos</div>
+            <div>🥪 Lunch y coffee break</div>
+            <div>🍔 Mesas de hamburguesas y panchos</div>
+            <div>🍕 Pizzas y empanadas</div>
+            <div>🍢 Finger food</div>
+            <div>🍰 Mesa dulce</div>
+            <div>🎂 Tortas personalizadas</div>
+            <div>🍹 Barra de bebidas sin alcohol</div>
+            <div>🎉 Eventos empresariales y sociales</div>
+            <div>🥗 Viandas saludables</div>
+            <div>🚚 Entrega y armado del servicio</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="nosotros">
+
+    <div class="container">
+
+        <h2>Nosotros</h2>
+
+       <p>
+Soluciones gastronómicas para empresas, eventos sociales,
+viandas saludables y celebraciones especiales.
+</p>
+
+    </div>
+
+</section>
+
+<section id="contacto">
+
+    <div class="container">
+
+        <h2>Contacto</h2>
+
+        <div class="contact-grid">
+
+           
+                <form
+    name="presupuesto"
+    method="POST"
+    action="/gracias.html"
+    data-netlify="true"
+    netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="presupuesto">
+
+<input
+    type="hidden"
+    name="subject"
+    value="Nueva solicitud de presupuesto">
+
+<p hidden>
+    <input name="bot-field">
+</p>
+
+<input
+    type="text"
+    name="nombre"
+    placeholder="Nombre"
+    required>
+
+<input
+    type="tel"
+    name="telefono"
+    placeholder="Teléfono"
+    pattern="[0-9+ ]{8,20}"
+    required>
+
+<input
+    type="email"
+    name="email"
+    placeholder="Correo electrónico">
+
+<select name="evento">
+
+    <option value="">Tipo de evento</option>
+
+    <option>Cumpleaños</option>
+    <option>15 años</option>
+    <option>Boda</option>
+    <option>Evento empresarial</option>
+    <option>Otro</option>
+
+</select>
+
+<input
+    type="date"
+    name="fecha_evento">
+
+<input
+    type="number"
+    name="invitados"
+    min="1"
+    max="1000"
+    placeholder="Cantidad de invitados">
+
+<textarea
+    name="mensaje"
+    rows="5"
+    placeholder="Contanos sobre tu evento"></textarea>
+
+<button type="submit">
+    Solicitar Presupuesto
+</button>
+
+</form>
+
+            <div class="contact-info">
+
+                <h3>Redes y Contacto</h3>
+                <p>
+    📸 <a href="https://www.instagram.com/3hermanas.2026?utm_source=qr&igsh=MWxubHR3Y2JuZnN2cQ==" target="_blank">
+        Instagram
+    </a>
+</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        Sabores que hacen de cada celebración un momento inolvidable.
+    </p>
+    <p> © 2026 Las 3 Hermanas Catering. Todos los derechos reservados.</p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
