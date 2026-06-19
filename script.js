@@ -29,3 +29,22 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Las 3 Hermanas Catering cargado correctamente");
 
 });
+const modal = document.getElementById("imageModal");
+const modalImage = document.getElementById("modalImage");
+
+document.querySelectorAll(".gallery-image").forEach(img => {
+
+img.addEventListener("click", () => {
+
+    modalImage.src = img.src;
+    modal.classList.add("active");
+
+});
+
+});
+
+modal.addEventListener("click", () => {
+
+modal.classList.remove("active");
+
+});
